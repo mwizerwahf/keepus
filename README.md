@@ -28,10 +28,9 @@ A lightweight, mobile-friendly PHP web application designed for couples to conne
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/KeepUs.git
+    git clone https://github.com/mwizerwahf/keepus.git
     cd KeepUs
-    ```
-    *(Note: Replace `https://github.com/your-username/KeepUs.git` with the actual repository URL once created.)*
+   
 
 2.  **Database Setup:**
     *   Create a MySQL database (e.g., `keepus_db`).
