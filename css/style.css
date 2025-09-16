@@ -1,0 +1,290 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #fdf1f1;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+    padding: 1rem;
+}
+
+/* Header */
+header {
+    background-color: #e9a8a8;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Navigation */
+nav {
+    background-color: #d88c8c;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #fff;
+}
+
+.nav-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #c77b7b;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #d88c8c;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Main content */
+main {
+    padding: 1rem;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button[type="submit"],
+.btn {
+    background-color: #e9a8a8;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover,
+.btn:hover {
+    background-color: #d88c8c;
+}
+
+/* Game list */
+.game-list {
+    list-style: none;
+    padding: 0;
+}
+
+.game-list li {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Notes list */
+.notes-list {
+    list-style: none;
+    padding: 0;
+}
+
+.note-item {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Picture gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Voice notes */
+.voice-notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.voice-note-item audio {
+    width: 100%;
+}
+
+/* Links */
+.links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.link-item a {
+    color: #d88c8c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Login/Register page */
+.wrapper {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Game specific styles */
+.game-content {
+    padding: 1rem;
+}
+
+.game-section {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.game-input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #e9a8a8;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.game-button {
+    background-color: #e9a8a8;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.game-button:hover {
+    background-color: #d88c8c;
+}
+
+.question-list,
+.guess-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.question-list li,
+.guess-list li {
+    background-color: #fdf1f1;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #e9a8a8;
+}
+
+.question-item {
+    background-color: #fdf1f1;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    border: 1px solid #e9a8a8;
+}
+
+.answer-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
